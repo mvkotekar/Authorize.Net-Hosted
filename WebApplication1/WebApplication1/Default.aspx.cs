@@ -14,6 +14,7 @@ namespace WebApplication1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Response.Write(this.Request.ToString());
 
         }
 
@@ -49,7 +50,7 @@ namespace WebApplication1
             collections.Add("dataValue", dataValue);
             collections.Add("dataDescriptor", dataDescriptor);
             collections.Add("token", token);
-            string remoteUrl = "https://accept.authorize.net/payment/payment";
+            string remoteUrl = "https://test.authorize.net/payment/payment";
 
             string html = "<html><head>";
             html += "</head><body onload='document.forms[0].submit()'>";
