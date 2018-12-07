@@ -75,15 +75,15 @@ namespace WebApplication1
             email = "test@test.com",
             };
 
+            var t = new orderType();
+            t.description = "xxxx";
+            t.invoiceNumber = "123";
+
             var transactionRequest = new transactionRequestType
             {
                 transactionType = transactionTypeEnum.authCaptureTransaction.ToString(),    // authorize capture only
-                amount = amount,
-                lineItems = lineItems,
-                billTo = billingAddress,
-                refTransId = "123456",
-                customer = customer,
-                customerIP = "192.168.1.1",
+                amount = 333m,
+                order = t,
                 //payment = paymentType payment information should not be sent in hosted payment option this will not generate token
             };
 
